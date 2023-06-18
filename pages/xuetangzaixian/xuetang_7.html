@@ -63,17 +63,23 @@
 
   <div class="container">
     <div class="question">
-      <p>1. 信息隐藏算法三个性能指标（透明性、鲁棒性、隐藏容量）之间相互制约，不存在能让这三个性能指标同时达到最优的算法。</p>
+      <p>1. 通过分析现有的数字视频编解码系统，视频水印根据嵌入的策略一般可以分成（）。</p>
       <div class="form-check">
         <input class="form-check-input" type="checkbox">
         <label class="form-check-label">
-          Yes
+          在未压缩域中嵌入
         </label>
       </div>
       <div class="form-check">
         <input class="form-check-input" type="checkbox">
         <label class="form-check-label">
-          No
+          在视频编码器中嵌入
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          在视频码流中嵌入
         </label>
       </div>
       <button class="btn btn-secondary show-answer" data-question="1" onclick="toggleAnswer(this)">
@@ -82,9 +88,604 @@
     </div>
     <div class="answer" id="answer1">
       <h2>参考答案</h2>
-      <p>Yes</p>
+      <p>ALL</p>
     </div>
   </div>
+
+  <div class="container">
+    <div class="question">
+      <p>2. 按水印的嵌入与提取是否跟视频的内容相关分，可分为与视频内容无关的第一代视频水印和基于内容的第二代视频水印方案。</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="2" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer2">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>3. 视频和图像有相类似的地方，但是视频水印和图像水印又有一些重要差异:（ ）。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          视频信息作为大容量、结构复杂、信息压缩等特征的载体，
+          调整给定水印的信息和宿主信号的信息之间的比率，变得越来越不太重要了。
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          可用信号空间不同。
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          视频作为一系列静止图像的集合，会遭受一些特定的攻击，如帧平均、帧剪切、帧重组、掉帧、速率改变等。
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          虽然视频信号空间非常大，但视频水印经常有实时或接近实时的限制，与静止图像水印相比，降低复杂度的要求更重要。
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="3" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer3">
+      <h2>参考答案</h2>
+      <p>ALL</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>4. 水印容量也常称为数据嵌入量，指单位长度的音频中可以隐藏的秘密信息量，通常用比特率来表示，单位为bit/s,即每秒音频中可以嵌入多少比特的水印信息。</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="4" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer4">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>5. 音频水印算法性能好坏一般使用（ ）指标来衡量。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          透明性
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          容量
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          鲁棒性
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="5" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer5">
+      <h2>参考答案</h2>
+      <p>ALL</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>6. 动态数据结构水印的机制是，输入特定信息激发程序,
+        把水印信息隐藏在堆、栈或者全局变量域等程序状态中。
+        当所有信息都输完之后，通过检测程序变量的当前值来进行水印提取。
+        可以安排一个提取水印信息的进程或者是在调试器下运行程序查看变量取值。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="6" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer6">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>7. 根据水印被加载的时刻，软件水印可分为静态水印和动态水印。（ ）是保存在程序的执行状态中，而不是程序源代码本身。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          静态水印
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          动态水印
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="7" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer7">
+      <h2>参考答案</h2>
+      <p>动态水印</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>8. 根据水印被加载的时刻，软件水印可分为静态水印和动态水印。
+        （ ）存储在可执行程序代码中，比较典型的是把水印信息放在安装模块部分，
+        或者是指令代码中，或者是调试信息的符号部分。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          静态水印
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          动态水印
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="8" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer8">
+      <h2>参考答案</h2>
+      <p>静态水印</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>9. 根据水印的嵌入位置，软件水印可以分为代码水印和数据水印。
+        （ ）隐藏在程序的指令部分中，而（ ）则隐藏在包括头文件、
+        字符串和调试信息等数据中。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          代码水印、数据水印
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          数据水印、代码水印
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="9" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer9">
+      <h2>参考答案</h2>
+      <p>代码水印、数据水印</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>10. 为了使软件水印能够真正发挥保护软件所有者的知识产权的作用，一般要求软件水印具有以下特征：（ ）
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          能够证明软件的产权所有者。
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          具有鲁棒性。
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          软件水印的添加应该定位于软件的逻辑执行序列层面而不依赖于某一具体的体系结构。
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          软件水印应该便于生成、分发以及识别。
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="10" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer10">
+      <h2>参考答案</h2>
+      <p>ALL</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>11. 软件水印就是把程序的版权信息和用户身份信息嵌入到程序中。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="11" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer11">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>12. 根据识别篡改的能力，可以将脆弱性水印划分为以下四个层次：
+        完全脆弱性水印、半脆弱水印、图像可视内容鉴别、自嵌入水印。
+        其中，（  ）：即把图像本身作为水印加入，这不仅可以鉴别图像的内容，
+        而且可以部分恢复被修改的区域，如图像被剪掉一部分或被换掉一部分，
+        就可以利用这种水印来恢复原来被修改的区域，
+        这种水印可能是脆弱的或半脆弱的。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          完全脆弱性水印
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          半脆弱水印
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          图像可视内容鉴别
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          自嵌入水印
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="12" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer12">
+      <h2>参考答案</h2>
+      <p>自嵌入水印
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>13. 根据识别篡改的能力，可以将脆弱性水印划分为四个层次：
+        完全脆弱性水印、半脆弱水印、图像可视内容鉴别、自嵌入水印。
+        其中，（  ）：指的是水印能够检测出任何对图像像素值进行改变的操作或对图像完整性的破坏，
+        如在医学图像数据库中，图像的一点点改动可能都会影响最后的诊断结果，
+        因此此时嵌入的水印就应当属于完全脆弱性数字水印。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          完全脆弱性水印
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          半脆弱水印
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          图像可视内容鉴别
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          自嵌入水印
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="13" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer13">
+      <h2>参考答案</h2>
+      <p>完全脆弱性水印</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>14. 所谓（ ）技术就是在保证多媒体信息一定感知质量的前提下，
+        将数字、序列号、文字、图像标志等作为数字水印嵌入到多媒体数据中。
+        当多媒体内容受到怀疑时，可将该水印提取出来用于多媒体内容的真伪识别，
+        并且指出篡改的位置，甚至攻击类型等。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          稳健性数字水印
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          脆弱性数字水印
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="14" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer14">
+      <h2>参考答案</h2>
+      <p>脆弱性数字水印
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>15. 对于图像取值比较均匀的光滑区域，人眼对这些地方的失真非常敏感，
+        因此这些地方不适合嵌入水印。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="15" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer15">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>16. 在设计稳健性的数字水印算法时，通常需要找到在某一种变换下的相对不变量，
+        将水印嵌入在这些相对不变量中，这样，就可以在一定程度上抵抗相应的攻击或破坏。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="16" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer16">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>17. 水印提取的输出结果可以是水印本身，也可以是判断水印是否存在的判决结果，这取决于水印提取算法。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="17" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer17">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>18. 设C为被保护的数字产品，W为水印信息，K表示数字水印嵌入算法的密钥，
+        CW 表示嵌入数字水印后的数字产品。则数字水印的嵌入过程包括四个部分:
+        <br>
+        (   )：对被保护的数字产品C进行的预处理。此预处理可以是任何一种变换操作，
+        如DCT变换、DFT变换、小波变换、傅里叶一梅林变换等；
+        也可以是一些变换操作的组合还可以是空操作(这时嵌入的水印就成了空间域水印)。
+        <br>
+        (   )：对数字水印W进行的预处理。WPP也可以是任何一种变换操作，
+        与CPP类似。另外还可以包括诸如置乱处理等操作。
+        <br>
+        (   ) ：数字水印嵌入算法。
+        <br>
+        (   ) ：CPP的逆操作。</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          CPP      WPP      G      CPP^-1 
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          WPP     G     CPP    CPP^-1
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          G    CPP^-1    CPP    WPP 
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          CPP      G    CPP^-1      WPP  
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="18" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer18">
+      <h2>参考答案</h2>
+      <p>CPP      WPP      G      CPP^-1 </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>19. 水印的稳健性包含两个方面的含义，从选用水印的形式上以及水印算法上都要考虑。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="19" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer19">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>20. 第三类数字水印是一种可视图像，它可以是一个人的手写签名或者是一些字符，以一个二值图像的形式保存，也可以是一个徽标形式，以二值图像(或灰度图像)的格式保存。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="20" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer20">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+
   
   <ul class="pagination">
     <li class="page-item"><a class="page-link page-change-go" href="./xuetang_6.html">←</a></li>

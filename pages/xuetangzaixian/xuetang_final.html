@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../../css/global.css">
   <script src="../../js/global.js" defer></script>
   <script src="https://kit.fontawesome.com/a94ada2a6c.js" crossorigin="anonymous" defer></script>
-  
+
   <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
   <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js" defer></script>
 </head>
@@ -63,17 +63,26 @@
 
   <div class="container">
     <div class="question">
-      <p>1. 信息隐藏算法三个性能指标（透明性、鲁棒性、隐藏容量）之间相互制约，不存在能让这三个性能指标同时达到最优的算法。</p>
+      <p>1. 音频水印按照水印嵌入的位置也可以分为：（ ）。
+      </p>
       <div class="form-check">
         <input class="form-check-input" type="checkbox">
         <label class="form-check-label">
-          Yes
+          在原始音频信号中嵌入；
         </label>
       </div>
       <div class="form-check">
         <input class="form-check-input" type="checkbox">
         <label class="form-check-label">
-          No
+          在音频编码器中嵌入，这种方法稳健性较高，
+          但需要复杂的编码和解码过程，运算量大，实时性不好；
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          在压缩后的音频数据流中直接嵌入，这种方法避免了复杂的编解码过程，
+          但稳健性不高，而且能够嵌入的水印容量不大。
         </label>
       </div>
       <button class="btn btn-secondary show-answer" data-question="1" onclick="toggleAnswer(this)">
@@ -82,10 +91,1426 @@
     </div>
     <div class="answer" id="answer1">
       <h2>参考答案</h2>
-      <p>Yes</p>
+      <p>ALL</p>
     </div>
   </div>
-  
+
+  <div class="container">
+    <div class="question">
+      <p>2. （ ）既不试图擦除水印,也不试图使水印检测无效,
+        而是使得检测出的水印存在多个解释。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          去除攻击
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          表达攻击
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          解释攻击
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          法律攻击
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="2" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer2">
+      <h2>参考答案</h2>
+      <p>解释攻击</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>3. 被动隐写分析方法的评价,一般采用准确性、适用性、实用性和复杂度四个指标来衡量。其中，（ ）是指分析算法对不同的隐写算法的有效性。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          准确性
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          适用性
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          实用性
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          复杂度
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="3" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer3">
+      <h2>参考答案</h2>
+      <p>适用性</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>4. 隐写分析根据最终效果可分为两种:
+        被动隐写分析(PassiveSteganalysis)、主动隐写分析(Active Steganalysis)。
+        其中，（ ）的目标是估算隐藏信息的长度、估计隐藏信息的位置、
+        猜测隐藏算法使用的密钥、猜测隐藏算法所使用的某一些参数，其终极目标是提取隐藏的秘密信息。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          被动隐写分析
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          主动隐写分析
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="4" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer4">
+      <h2>参考答案</h2>
+      <p>主动隐写分析
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>5. 隐写分析根据隐写分析算法适用性,可分为两类：
+        专用隐写分析(Specific Steganalysis)和通用隐写分析(Universal Steganalysis)。
+        其中，（ ）是针对特定隐写技术对象的特点进行设计，这类算法的检测率较高，
+        针对性强，但这类隐写分析算法只能针对某一种隐写算法。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          专用隐写分析算法
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          通用隐写分析算法
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="5" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer5">
+      <h2>参考答案</h2>
+      <p>专用隐写分析算法
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>6. 根据识别篡改的能力，可以将脆弱性水印划分为以下四个层次：
+        完全脆弱性水印、半脆弱水印、图像可视内容鉴别、自嵌入水印。
+        其中，（ ）：在有些场合，由于用户仅仅对于图像的视觉效果感兴趣，
+        也就是说，能够容许不影响视觉效果的任何篡改，
+        因此此时嵌入水印主要是对图像的主要特征进行真伪鉴别，水印更加稳健。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          完全脆弱性水印
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          半脆弱水印
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          图像可视内容鉴别
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          自嵌入水印
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="6" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer6">
+      <h2>参考答案</h2>
+      <p>图像可视内容鉴别
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>7. 根据水印的嵌入位置，软件水印可以分为代码水印和数据水印。
+        （ ）隐藏在程序的指令部分中，而（ ）则隐藏在包括头文件、
+        字符串和调试信息等数据中。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          代码水印、数据水印
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          数据水印、代码水印
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="7" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer7">
+      <h2>参考答案</h2>
+      <p>代码水印、数据水印</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>8. 为了抵抗旋转和缩放的处理，可以引入( )水印技术等。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          DCT域
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          小波域
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          傅里叶-梅林（FMT）变换域
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="8" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer8">
+      <h2>参考答案</h2>
+      <p>傅里叶-梅林（FMT）变换域</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>9. 拼凑算法只隐藏了一个信息,就是“水印提取者是否知道水印嵌入时使用的密钥”,
+        如果他不知道密钥,那么自然能够得到s≈2n,如果他知道密钥,
+        那么求出的s则近似为零。也就是证明了水印提取者是不是版权所有者。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="9" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer9">
+      <h2>参考答案</h2>
+      <p>NO</p>
+      <p>拼凑算法只隐藏了一个信息,
+        就是“水印提取者是否知道水印嵌入时使用的密钥”,如果他知道密钥,
+        那么自然能够得到s≈2n,如果他不知道密钥,那么求出的s则近似为零。
+        也就是证明了水印提取者是不是版权所有者。
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>10. （ ）水印又称为基于数据目的的水印，
+        主要包含数字作品的版权信息、购买者的个人信息，
+        可以用于防止数字产品的非法拷贝和非法传播。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          版权标识
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          数字指纹
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="10" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer10">
+      <h2>参考答案</h2>
+      <p>数字指纹</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>11. （ ）主要用于在数字作品中标识著作权信息，如作者、作品序号等，
+        它要求嵌入的水印能够经受各种常用的信号处理操作，
+        包括无意的或恶意的处理，如：有损压缩、滤波、平滑、信号裁剪、
+        图像增强、重采样、几何变形等等。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          健壮性数字水印
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          脆弱性数字水印
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="11" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer11">
+      <h2>参考答案</h2>
+      <p>健壮性数字水印</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>12. （ ）依赖于软件的运行状态，通常是在一类特殊的输人下才会产生，
+        水印的验证也是在特定的时机下才能完成。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          静态水印
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          动态水印
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="12" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer12">
+      <h2>参考答案</h2>
+      <p>动态水印</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>13. 对于假设检验的理论框架,可能的错误有如下两类。
+
+        第一类错误:实际不存在水印但却检测到水印,该类错误用（） (误识率)Pfa衡量。
+
+        第二类错误:实际有水印但是却没有检测出水印,用（ ）Prej表示。
+
+        总错误率为Perr=Pfa+Prej。</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          虚警率，漏检率
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          漏检率，虚警率
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="13" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer13">
+      <h2>参考答案</h2>
+      <p>虚警率，漏检率</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>14. 数字水印是永久镶嵌在其他数据(宿主数据)中具有可鉴别性的数字信号
+        或模式，并且不影响宿主数据的可用性。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="14" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer14">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>15. 数字水印应该难以被擦除，指的是（ ）。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          可证明性
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          不可感知性
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          安全性
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          稳健性
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="15" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer15">
+      <h2>参考答案</h2>
+      <p>稳健性</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>16. 高频代表图像像素之间慢变化，低频代表像素之间的快变化。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="16" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer16">
+      <h2>参考答案</h2>
+      <p>NO</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>17. 在图像的索引数据中进行LSB的替换。图像的索引数据代表的是调色板中某一种颜色的顺序号，
+        由于调色板并不要求有任何的排序，因此调色板中相邻的颜色值在感观上有可能并不接近，
+        因此，简单地修改图像索引数据的LSB,可能会导致颜色的跳跃变化。
+        那么如何解决呢？
+      </p>
+      <div class="form-check">
+        <label class="form-check-label">
+          主观题
+        </label>
+        <br>
+        <textarea rows="5" cols="40"></textarea>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="17" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer17">
+      <h2>参考答案</h2>
+      <p>答案来自ChatGPT, 仅供参考：</p>
+      <br>
+      <p>
+        为了避免颜色跳跃变化，可以使用一些技术来减少这种影响，例如：
+        <br>
+        1. 通过使用更高位的比特来进行替换，而不是仅使用最低有效位（LSB）。
+        这将减少对颜色值的影响，从而减少跳跃变化。
+        <br>
+        2. 对于需要进行替换的像素，可以使用周围像素的颜色值来进行平滑处理。
+        这将使替换后的颜色更加接近周围的颜色，从而减少颜色跳跃变化。
+        <br>
+        3. 可以使用一些算法来对颜色进行量化，从而减少颜色的数量。
+        这将使得调色板中相邻的颜色更加接近，从而减少颜色跳跃变化。
+        <br>
+        4. 进行颜色替换之前，可以先对图像进行平滑处理，从而减少颜色的变化。
+        例如，可以使用高斯滤波器来平滑图像。
+        <br>
+        通过采用上述技术，可以减少颜色跳跃变化，从而更好地进行LSB替换。
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>18. 编程题：请使用LSB方法，将你所在省份电视台的台标图案隐藏进lena图像，
+        再提取出来。要求提交程序源代码和运行结果的截图</p>
+      <div class="form-check">
+        <label class="form-check-label">
+          编程题（nku期末考试不考，无所谓）：
+        </label>
+        <textarea rows="5" cols="40"></textarea>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="18" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer18">
+      <h2>参考答案</h2>
+      <p>来自ChatGPT：</p>
+      <div style="background-color: gray;color: aliceblue;">
+        <pre>
+          <code>
+            from PIL import Image
+
+            # 加载图像
+            lena_img = Image.open("lena.png")
+            logo_img = Image.open("img.png")
+            
+            # 调整图像尺寸
+            logo_img = logo_img.resize(lena_img.size)
+            
+            # 转换为RGBA格式，方便访问每个像素的RGBA值
+            logo_img = logo_img.convert("RGBA")
+            lena_img = lena_img.convert("RGBA")
+            
+            # 将logo图像的RGBA值中的A通道值提取出来，作为隐藏信息
+            logo_data = logo_img.getdata()
+            hidden_data = [pixel[3] for pixel in logo_data]
+            
+            # 将隐藏信息嵌入到lena图像的RGBA值中的R通道的最低位中
+            lena_data = list(lena_img.getdata())
+            new_data = []
+            for i, pixel in enumerate(lena_data):
+                r, g, b, a = pixel
+                if i < len(hidden_data):
+                    # 将hidden_data中的每个值的二进制的最后一位替换为R的最低位的值
+                    r = (r & 0xFE) | (hidden_data[i] & 0x01)
+                new_data.append((r, g, b, a))
+            
+            # 创建新图像
+            new_img = Image.new("RGBA", lena_img.size)
+            new_img.putdata(new_data)
+            
+            # 保存新图像
+            new_img.save("stego.png")
+            
+            # 从新图像中提取隐藏信息
+            stego_img = Image.open("stego.png")
+            stego_data = stego_img.getdata()
+            extracted_data = [(pixel[0] & 0x01) for pixel in stego_data]
+            
+            # 将提取出的信息转换为图像
+            extracted_data = bytes(extracted_data)
+            extracted_img = Image.frombytes("1", len(logo_img.size), extracted_data)
+            extracted_img.save("extracted.png")
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>19. （ ）是信息隐藏领域研究时间最长、研究成果最多的载体类型之一。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          图像
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          音频
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          视频
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          文本
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="19" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer19">
+      <h2>参考答案</h2>
+      <p>图像
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>20. 回声隐藏巧妙地利用人类听觉系统(HAS)的频域掩蔽特性，
+        通过向音频信号中引入回声来完成隐藏秘密信息的一种技术方法。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="20" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer20">
+      <h2>参考答案</h2>
+      <p>NO</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>21. 在数字声音信号中引入回声，可根据引入回声的位置不同来隐藏秘密信息。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="21" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer21">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>22. 根据信道噪声性质可以把隐藏模型分为加性噪声和非加性噪声信道模型。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="22" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer22">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>23. 人眼视觉系统（HVS）比人耳听觉系统（HAS）灵敏得多。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="23" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer23">
+      <h2>参考答案</h2>
+      <p>NO</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>24. 与密码学一样，信息隐藏系统也存在攻击者，他们可以分为被动攻击者和主动攻击者。
+        （ ）只是在监视和试图破译隐藏的秘密信息，并不对伪装对象进行任何改动。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          主动攻击者
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          被动攻击者
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="24" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer24">
+      <h2>参考答案</h2>
+      <p>被动攻击者</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>25. 在含有秘密信息的载体中错误地认为没有信息隐藏，称为（ ）。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          纳伪错误
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          弃真错误
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="25" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer25">
+      <h2>参考答案</h2>
+      <p>弃真错误</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>26. 请画出信息隐藏的原理框图</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          图片
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="26" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer26">
+      <h2>参考答案</h2>
+      <p>参考答案来自ChatGPT</p>
+      <img src="../../static/info_yuanli.png" width="100%" alt="img">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>27. 对lena图像进行2DCT变换，可以看出，左上角的系数偏大，它代表（ ），
+        其余绝大部分系数都非常接近于零。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          交流和高频系数
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          直流和低频系数
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          直流和中频系数
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          直流和高频系数
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="27" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer27">
+      <h2>参考答案</h2>
+      <p>直流和低频系数</p>
+      <br>
+      <p>对lena图像进行2DCT变换，可以看出，DCT变换的系数主要集中在了左上角，
+        它代表直流和低频系数，其余绝大部分系数都非常接近于零。
+        所以，大部分图像压缩算法的核心都是采用DCT变换，以得到较大的压缩比</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>28. 主观评价是比较准确的评价图像质量的方法，但是它往往受到观察者本身的(  )等因素的影响。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          知识背景
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          情绪
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          疲劳程度
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="28" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer28">
+      <h2>参考答案</h2>
+      <p>ALL</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>29. 当我们从明亮的阳光下走进黑暗的电影院时，会感到一片漆黑，
+        但是过一会后，视觉会逐渐恢复，人眼这种适应暗环境的能力称为亮适应性。</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="29" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer29">
+      <h2>参考答案</h2>
+      <p>NO</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>30. 波形编码一般的编码速率为16 ~ 64 kbit/s。
+        要想达到更低的编码速率，波形编码就无能为力了。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="30" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer30">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>31. 一般认为MOS分为（ ）称为通信质量，能感觉到语音质量有所下降，
+        但不妨碍正常通话。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          4.0-4.5分
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          3.5分左右
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          2.5-3.0分
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          2.0分以下
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="31" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer31">
+      <h2>参考答案</h2>
+      <p>3.5分左右
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>32. 语音的主观评价的缺点有：（ ）。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          费时费力
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          灵活性不够
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          重复性和稳定性较低
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          受试听者的主观影响较大
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="32" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer32">
+      <h2>参考答案</h2>
+      <p>ALL</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>33. 目前使用较多的主观评价方法包括：平均意见分(Mean Opinion Scorer，MOS)、
+        音韵字可懂度测量(DRT)和满意度测量(DAM)等，其中（ ）评分法是一种使用最广的主观评价方法。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          平均意见分(Mean Opinion Scorer，MOS)
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          音韵字可懂度测量(DRT)
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          满意度测量(DAM)
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="33" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer33">
+      <h2>参考答案</h2>
+      <p>平均意见分(Mean Opinion Scorer，MOS)
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>34. 对于高通滤波而言，
+
+        保留( )Hz以上的频率成分清晰度基本不受影响；
+        
+        保留( )Hz以上的频率成分，清晰度下降一半左右;
+        
+        而若仅保留( )Hz以上的成分时，清晰度降为零。</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          6k,2300,400
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          2300,400,6k
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          400,2300,6k
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          6K,400,300
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="34" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer34">
+      <h2>参考答案</h2>
+      <p>400,2300,6k</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>35. 异时掩蔽可分为(  )和滞后掩蔽。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          同时掩蔽
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          时域掩蔽
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          频域掩蔽
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          超前掩蔽
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="35" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer35">
+      <h2>参考答案</h2>
+      <p>超前掩蔽</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>36. 正常人的听觉系统是极为灵敏的，正常人可听声音的频率范围为0.016-（  ）kHz。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          10
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          16
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          20
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          26
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="36" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer36">
+      <h2>参考答案</h2>
+      <p>16</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>37. 对大多数语音信号而言，通常认为在（ ）ms的时间范围内是近似不变的。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          0～10 
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          10～20 
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          20～30 
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          30～40
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="37" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer37">
+      <h2>参考答案</h2>
+      <p>10-20</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>38. ________也称稳健性，是指隐藏的秘密信息抵抗各种信号处理和攻击的能力，
+        这类水印通常不会因常见的信号处理和攻击而丢失隐藏的水印信息。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          透明性
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          鲁棒性
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          隐藏容量
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="38" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer38">
+      <h2>参考答案</h2>
+      <p>鲁棒性</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>39. __________同一个产品被多个用户买去，在每一个用户买到的复件中，
+        都预先被嵌入了包含购买者的信息，这对跟踪和监控产品在市场上的非法复制是非常有用的。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          用于版权保护的数字水印
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          用于盗版跟踪的数字指纹
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          用于复制保护的数字水印
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="39" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer39">
+      <h2>参考答案</h2>
+      <p>用于盗版跟踪的数字指纹</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>40. 关于叠像术，以下论述正确的有：________。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          产生的每一张图像不再是随机噪声图像，而是正常人能看懂的图像：图像上有不同的文字或图画。
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          只要将一定数量的图像叠加在一起，则原来每一张图像上的内容都将消失，而被隐藏的秘密内容出现。
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          单个图像无论是失窃还是被泄露，都不会给信息的安全带来灾难性的破坏。
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          由于每一张图像的“可读性”，使其达到了更好的伪装效果。
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="40" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer40">
+      <h2>参考答案</h2>
+      <p>ALL</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>41. 《全国信息隐藏暨多媒体信息安全学术大会》（CIHW）开始于_______年。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          1992
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          1996
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          1999
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          2002
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="41" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer41">
+      <h2>参考答案</h2>
+      <p>1999</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>42. 使用隐写墨水和显影剂的方法属于__________。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          技术性的隐写术
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          保护版权的隐写术
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          语言学中的隐写术
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="42" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer42">
+      <h2>参考答案</h2>
+      <p>技术性的隐写术
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>43. 德莫瑞特思通过书记板提醒了斯巴达(Sparta)，
+        告知了波斯国王薛西斯(Xerxes)入侵希腊的计划。他首先去掉书记板上的腊，
+        然后将消息写在木板上，再用腊覆盖，
+        这样处理后的书记板看起来是一个完全空白的。这种方法属于__________。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          保护版权的隐写术
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          技术性的隐写术
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          语言学中的隐写术
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="43" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer43">
+      <h2>参考答案</h2>
+      <p>技术性的隐写术</p>
+    </div>
+  </div>
+
+
+
   <ul class="pagination">
     <li class="page-item"><a class="page-link page-change-go" href="./xuetang_9.html">←</a></li>
     <li class="page-item"><a class="page-link page-change-items" href="./xuetang_1.html">1</a></li>
