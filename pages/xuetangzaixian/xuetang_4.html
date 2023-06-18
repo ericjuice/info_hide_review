@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>信息隐藏技术-学堂在线-4</title>
+  <link rel="stylesheet" href="../../css/global.css">
+  <script src="../../js/global.js" defer></script>
+  <script src="https://kit.fontawesome.com/a94ada2a6c.js" crossorigin="anonymous" defer></script>
+  
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js" defer></script>
+</head>
+
+<body class="anti-bs-body">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">
+        <i class="fa fa-home"></i>
+        Home
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">
+              <i class="fa fa-user"></i>
+              About
+            </a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="info.html">Info</a>
+          </li> -->
+          <button class="btn btn-dark" id="dark-mode-toggle">黑暗模式</button>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link page-change-go" href="./xuetang_3.html">←</a></li>
+    <li class="page-item"><a class="page-link page-change-items" href="./xuetang_1.html">1</a></li>
+    <li class="page-item"><a class="page-link page-change-items" href="./xuetang_2.html">2</a></li>
+    <li class="page-item"><a class="page-link page-change-items" href="./xuetang_3.html">3</a></li>
+    <li class="page-item active"><a class="page-link page-change-items" href="./xuetang_4.html">4</a></li>
+    <li class="page-item"><a class="page-link page-change-items" href="./xuetang_5.html">5</a></li>
+    <li class="page-item"><a class="page-link page-change-items" href="./xuetang_6.html">6</a></li>
+    <li class="page-item"><a class="page-link page-change-items" href="./xuetang_7.html">7</a></li>
+    <li class="page-item"><a class="page-link page-change-items" href="./xuetang_8.html">8</a></li>
+    <li class="page-item"><a class="page-link page-change-items" href="./xuetang_9.html">9</a></li>
+    <li class="page-item"><a class="page-link page-change-items" href="./xuetang_final.html">期末</a></li>
+    <li class="page-item"><a class="page-link page-change-go" href="./xuetang_5.html">→</a></li>
+  </ul>
+
+  <center>
+    <h2>信息隐藏技术-学堂在线-第四章</h2>
+  </center>
+
+  <div class="container">
+    <div class="question">
+      <p>1. 改变（ ），都不会引起听觉差异，因此可在这几种声音消息中嵌入水印。</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          声音开启的最低比特位
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          乐器编号的最低位比特
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          通道触动压力的低4比特位
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="1" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer1">
+      <h2>参考答案</h2>
+      <p>ALL</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>2. 一个标准MIDI文件基本上是由两部分组成：头块和音轨块。头块包含一系列由MIDI消息构成的MIDI数据流。原则上，可为某种声音、某种乐谱或某种乐器等分配一个音轨块。 </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="2" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer2">
+      <h2>参考答案</h2>
+      <p>NO</p>
+      <p>头块用来描述整个MIDI文件基本信息。
+        音轨块则包含一系列由MIDI消息构成的MIDI数据流</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>3. MIDI全称是musical instrument digital interface，即乐器数字接口，也是一种专用于乐器的接口标准。</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="3" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer3">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>4. 目前，已经有一些专家学者对mp3信息隐藏进行了研究，提出了一些隐藏算法。根据这些算法的嵌入时间的特点对其分为三类：
+        压缩编码前嵌入、压缩编码中嵌入、压缩编码后嵌入。</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="4" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer4">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>5. MP3编码算法流程大致可以分为哪几部分？</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          时频映射
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          心理声学模型
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          量化编码
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          帧数据流格式化
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="5" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer5">
+      <h2>参考答案</h2>
+      <p>ALL</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>6. 回声隐藏算法的最大难点在于秘密信号的提取，其关键在于回声间距的确定。</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="6" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer6">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>7. 回声隐藏巧妙地利用人类听觉系统(HAS)的频域掩蔽特性，通过向音频信号中引入回声来完成隐藏秘密信息的一种技术方法。</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="7" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer7">
+      <h2>参考答案</h2>
+      <p>NO</p>
+      <p>利用人类听觉系统(HAS)的时域掩蔽特性</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>8. 音频信号和经过回声隐藏的携密数据对于人耳来说，前者就像是从耳机中听到的声音，没有回声，而后者就像是从扬声器里听到的声音，有所处空间诸如墙壁、家具等物体产生的回声。</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="8" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer8">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>9. 回声和原声间的延迟在一定范围内人耳都难以察觉，
+        亦即可以人为添加不同延迟的回声。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="9" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer9">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>10. 强信号的存在会使其附近的弱信号难以被感知。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="10" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer10">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>11. 在数字声音信号中引入回声，可根据引入回声的位置不同来隐藏秘密信息。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="11" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer11">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>12. LSB算法性能有（ ）。
+      </p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          透明度高
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          容量大
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          鲁棒性差
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="12" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer12">
+      <h2>参考答案</h2>
+      <p>ALL</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>13. LSB算法参数包括( )。</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          比特位置的选取
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          样点位置的选取
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="13" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer13">
+      <h2>参考答案</h2>
+      <p>ALL</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>14. 幅值为6(110B)的样点，哪怕（噪声干扰）幅度仅变化1，则可能会影响不止一个比特位发生变化。</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="14" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer14">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>15. 数字化音频中，低有效比特对音质贡献弱。改变低有效比特不会显著影响音质。</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="15" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer15">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>16. 对音频信息隐藏技术的要求有（ ）。</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          透明性
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          鲁棒性
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          同步要求
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          盲检测
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="16" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer16">
+      <h2>参考答案</h2>
+      <p>ALL</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>17. 人眼视觉系统（HVS）比人耳听觉系统（HAS）灵敏得多</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="17" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer17">
+      <h2>参考答案</h2>
+      <p>NO</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>18. 音频信号是二维信号</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="18" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer18">
+      <h2>参考答案</h2>
+      <p>NO</p>
+      <p>音频信号是一维信号。</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>19. 任何数字多媒体信息，在扫描和采样时，都会产生物理随机噪声，
+        而人的感观系统对这些随机噪声是不敏感的。替换技术就是利用这个原理，
+        试图用秘密信息比特替换掉随机噪声，以达到隐藏秘密信息的目的。</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="19" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer19">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>20. 根据信息隐藏的载体分类，可以分为图像中的信息隐藏、视频中的信息隐藏、
+        语音中的信息隐藏、文本中的信息隐藏、各类数据中的信息隐藏等。</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          YES
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          NO
+        </label>
+      </div>
+      <button class="btn btn-secondary show-answer" data-question="20" onclick="toggleAnswer(this)">
+        双击显示答案
+      </button>
+    </div>
+    <div class="answer" id="answer20">
+      <h2>参考答案</h2>
+      <p>YES</p>
+    </div>
+  </div>
+
+
+  
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link page-change-go" href="./xuetang_3.html">←</a></li>
+    <li class="page-item"><a class="page-link page-change-items" href="./xuetang_1.html">1</a></li>
+    <li class="page-item"><a class="page-link page-change-items" href="./xuetang_2.html">2</a></li>
+    <li class="page-item"><a class="page-link page-change-items" href="./xuetang_3.html">3</a></li>
+    <li class="page-item active"><a class="page-link page-change-items" href="./xuetang_4.html">4</a></li>
+    <li class="page-item"><a class="page-link page-change-items" href="./xuetang_5.html">5</a></li>
+    <li class="page-item"><a class="page-link page-change-items" href="./xuetang_6.html">6</a></li>
+    <li class="page-item"><a class="page-link page-change-items" href="./xuetang_7.html">7</a></li>
+    <li class="page-item"><a class="page-link page-change-items" href="./xuetang_8.html">8</a></li>
+    <li class="page-item"><a class="page-link page-change-items" href="./xuetang_9.html">9</a></li>
+    <li class="page-item"><a class="page-link page-change-items" href="./xuetang_final.html">期末</a></li>
+    <li class="page-item"><a class="page-link page-change-go" href="./xuetang_5.html">→</a></li>
+  </ul>
+
+</body>
+
+</html>
